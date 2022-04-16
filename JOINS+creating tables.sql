@@ -41,7 +41,7 @@ WHERE
 
 set @@global.sql_mode := replace(@@global.sql_mode, 'ONLY_FULL_GROUP_BY', '');
 
-#left joins
+#left joins - connection of matching values in selected tables only
 SELECT
     e.first_name,
     e.last_name,
@@ -64,7 +64,7 @@ select * from departments;
 select * from employees;
 select * from titles where title = 'Manager';
 
-#cross joins
+#cross joins - connection of all values in the selected tables
 SELECT 
     e.*, d.*
 FROM
